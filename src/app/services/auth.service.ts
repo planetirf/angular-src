@@ -13,11 +13,11 @@ user: any;
   constructor(private http: Http) { }
 
   // make POSt request to register to backend API
-  registerUser(user) {
+  registerUser(user): any {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/users/register', user, {headers: headers})
-    .map(res => res.json());
+    .pipe(map(res => res.json()));
 
   }
 }

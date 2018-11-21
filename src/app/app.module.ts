@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 // import forms
 import { FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     FlashMessagesModule.forRoot(),
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   // Service providers brought in here
   providers: [ValidateService, AuthService],
